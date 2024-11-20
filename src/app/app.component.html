@@ -1,0 +1,18 @@
+
+  <div>
+    <!-- Visualizador -->
+    <app-visualizer></app-visualizer>  
+    <app-password-input></app-password-input>
+    <app-email-input></app-email-input>
+    <app-text-input></app-text-input> 
+    
+  
+    <!-- Botones -->
+    <app-primary-button (onClick)="togglePinkTheme()"></app-primary-button>
+    <app-secondary-button (onClick)="aplicarAnimacion()"></app-secondary-button>
+    <app-accept-button (onClick)="guardarDatos()"></app-accept-button>
+    <app-cancel-button (onClick)="onCancelClick()"></app-cancel-button>
+    <app-dark-mode-button (onToggleDarkMode)="toggleDarkMode()"></app-dark-mode-button>
+    
+  
+  </div>

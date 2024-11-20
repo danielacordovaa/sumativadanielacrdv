@@ -1,0 +1,23 @@
+<p>visualizer works!</p>
+<div class="container">
+    <!-- Inputs -->
+    <input [(ngModel)]="email" placeholder="Email" type="email" />
+    <input [(ngModel)]="password" placeholder="Contraseña" type="password" />
+    <input [(ngModel)]="texto" placeholder="text" type="text" />
+  
+    <!-- Botón para animar el cuadrado -->
+    <button (click)="animarCuadrado()">Animar Cuadrado</button>
+    
+  
+    <!-- Contenedor de datos ingresados -->
+    <div class="datos-ingresados">
+      <h3>Datos Ingresados</h3>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Contraseña:</strong> {{ password }}</p>
+      <p><strong>Texto:</strong> {{ texto }}</p>
+    </div>
+  
+    <!-- Cuadrado con animación -->
+    <div class="cuadrado" [ngClass]="{ 'animado': animado }"></div>
+  </div>
+  
