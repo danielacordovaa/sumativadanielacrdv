@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';  // Importa CommonModule
 
   imports: [FormsModule, CommonModule],
 
-  templateUrl: './email-input.component.html',  // Actualiza aquí
+  templateUrl: './email-input.component.html',  
 
-  styleUrls: ['./email-input.component.css'],   // Actualiza aquí
-
+  styleUrls: ['./email-input.component.css'],  
 })
 
 export class EmailInputComponent {
