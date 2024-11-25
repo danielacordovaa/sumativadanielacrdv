@@ -1,0 +1,12 @@
+<div>
+    <label for="text">Texto:</label>
+    <input
+      type="text"
+      id="text"
+      [(ngModel)]="text"
+      (input)="validarTexto()"
+      placeholder="Ingresa solo texto"
+    />
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <p>Valor de Texto: {{ text }}</p>
+  </div>

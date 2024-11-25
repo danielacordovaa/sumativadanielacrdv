@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { PrimaryButtonComponent } from './primary-button/primary-button.component';
-import { SecondaryButtonComponent } from './secondary-button/secondary-button.component';
-import { AcceptButtonComponent } from './accept-button/accept-button.component';
-import { CancelButtonComponent } from './cancel-button/cancel-button.component';
-import { DarkModeButtonComponent } from './dark-mode-button/dark-mode-button.component';
+import { PrimaryButtonComponent } from './Components/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './Components/secondary-button/secondary-button.component';
+import { AcceptButtonComponent } from './Components/accept-button/accept-button.component';
+import { CancelButtonComponent } from './Components/cancel-button/cancel-button.component';
+import { DarkModeButtonComponent } from './Components/dark-mode-button/dark-mode-button.component';
 import { VisualizerComponent } from './visualizer/visualizer.component';
-import { PasswordInputComponent } from './password-input/password-input.component';
-import { EmailInputComponent } from './email-input/email-input.component'; 
+import { PasswordInputComponent } from './Inputs/password-input/password-input.component';
+import { EmailInputComponent } from './Inputs/email-input/email-input.component'; 
 import { FormsModule } from '@angular/forms';
-import { TextInputComponent } from './text-input/text-input.component';
+import { TextInputComponent } from './Inputs/text-input/text-input.component';
+import { CuadradoComponent } from './Components/cuadrado/cuadrado.component'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-root',
@@ -24,8 +25,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     VisualizerComponent,
     PasswordInputComponent,
     EmailInputComponent,
-    
-     // Asegúrate de importar el PasswordInputComponent
+    CuadradoComponent,
   ],
   templateUrl: './app.component.html', 
   styleUrls: ['./app.component.css'],
@@ -43,6 +43,18 @@ export class AppComponent {
     const visualizerElement = document.querySelector('app-visualizer') as any;
     if (visualizerElement) {
       visualizerElement.componentInstance.actualizarMensaje(mensaje);
+    }
+  }
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    const body = document.body;
+
+    if (this.isDarkMode) {
+      body.style.backgroundColor = '#121212';
+      body.style.color = '#ffffff';
+    } else {
+      body.style.backgroundColor = '#ffffff';
+      body.style.color = '#000000';
     }
   }
   togglePinkTheme() {
@@ -74,16 +86,5 @@ export class AppComponent {
   
 
   // Método para cambiar el tema de la aplicación a modo oscuro
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    const body = document.body;
-
-    if (this.isDarkMode) {
-      body.style.backgroundColor = '#121212';
-      body.style.color = '#ffffff';
-    } else {
-      body.style.backgroundColor = '#ffffff';
-      body.style.color = '#000000';
-    }
-  }
+  
 }

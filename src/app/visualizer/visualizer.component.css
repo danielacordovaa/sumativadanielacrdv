@@ -1,62 +1,85 @@
-.container {
+/* Estilos globales */
+body {
+  font-family: 'Inter', sans-serif; /* Fuente limpia y profesional */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa; /* Fondo suave */
+  color: #2c3e50; /* Texto oscuro y profesional */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  min-height: 100vh; /* Altura de pantalla completa */
 }
 
-input {
-  margin: 5px 0;
-  padding: 10px;
-  width: 250px;
-  font-size: 16px;
+/* Contenedor principal */
+.visualizer {
+  border: 1px solid #e1e8ed; /* Borde tenue */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff; /* Fondo blanco para destacar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 80%; /* Ancho adaptativo */
+  max-width: 800px; /* Máximo ancho */
+  margin-top: 10px;
 }
 
+/* Títulos */
+h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #8c00ff; /* Azul moderno */
+}
+
+/* Texto destacado */
+strong {
+  color: #333; /* Texto ligeramente oscuro */
+  font-weight: bold;
+}
+
+/* Disposición del contenido */
+.container {
+  display: flex; /* Uso de flexbox */
+  justify-content: space-between; /* Distribuye el espacio */
+  gap: 20px; /* Espacio uniforme entre los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+/* Inputs y sus contenedores */
+.inputs {
+  flex: 1; /* Ocupa espacio flexible */
+  margin-right: 20px; /* Espacio entre columnas */
+  min-width: 250px; /* Ancho mínimo para evitar colapsos */
+}
+
+.data-container {
+  border: 1px solid #007bff; /* Borde moderno en azul */
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #eaf4fc; /* Fondo claro en azul */
+  flex: 1; /* Ocupa espacio flexible */
+  min-width: 250px; /* Ancho mínimo para evitar colapsos */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+}
+
+/* Botones */
 button {
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border: none;
+  padding: 10px 15px;
   background-color: #007bff;
   color: white;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+  transform: translateY(-2px); /* Efecto de "flotación" */
 }
 
-.datos-ingresados {
-  margin-top: 20px;
-  padding: 20px;
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.datos-ingresados h3 {
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.datos-ingresados p {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #333;
-}
-
-.cuadrado {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  transition: all 0.5s ease-in-out;
-}
-
-.cuadrado.animado {
-  transform: scale(1.5);
-  background-color: orange;
+button:active {
+  transform: translateY(0); /* Vuelve a su posición original al hacer clic */
+  background-color: #004494; /* Azul aún más oscuro */
 }

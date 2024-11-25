@@ -1,23 +1,32 @@
-<p>visualizer works!</p>
-<div class="container">
-    <!-- Inputs -->
-    <input [(ngModel)]="email" placeholder="Email" type="email" />
-    <input [(ngModel)]="password" placeholder="Contraseña" type="password" />
-    <input [(ngModel)]="texto" placeholder="text" type="text" />
-  
-    <!-- Botón para animar el cuadrado -->
-    <button (click)="animarCuadrado()">Animar Cuadrado</button>
-    
-  
-    <!-- Contenedor de datos ingresados -->
-    <div class="datos-ingresados">
-      <h3>Datos Ingresados</h3>
-      <p><strong>Email:</strong> {{ email }}</p>
-      <p><strong>Contraseña:</strong> {{ password }}</p>
-      <p><strong>Texto:</strong> {{ texto }}</p>
+
+<div class="visualizer">
+  <div class="container">
+      <div>
+        <h2>Iniciar sesion</h2>
+        <div class="inputs">
+        <strong>Correo Electrónico:</strong>
+        <input type="text" [(ngModel)]="email" placeholder="Ingresa tu correo electrónico" />
+      </div>
+      <div>
+        <strong>Contraseña:</strong>
+        <input type="password" [(ngModel)]="password" placeholder="Ingresa tu contraseña" />
+      </div>
+      <div>
+        <strong>Texto:</strong>
+        <input type="text" [(ngModel)]="text" placeholder="Ingresa tu texto" />
+      </div>
     </div>
-  
-    <!-- Cuadrado con animación -->
-    <div class="cuadrado" [ngClass]="{ 'animado': animado }"></div>
+    <div class="data-container">
+      <h2>Visualizador de Datos</h2>
+      <div>
+        <strong>Correo Electrónico:</strong> {{ email }}
+      </div>
+      <div>
+        <strong>Contraseña:</strong> {{ password }}
+      </div>
+      <div>
+        <strong>Texto:</strong> {{ text }}
+      </div>
+    </div>
   </div>
-  
+</div>
